@@ -12,7 +12,7 @@ const utterances = [
   ["how are you", "how is life", "how are things"],
   ["hi", "hey", "hello", "good morning", "good afternoon"],
   ["what are you doing", "what is going on", "what is up"],
-  ["how old are you"], //3
+  ["how old are you"], 
   ["who are you", "are you human", "are you bot", "are you human or bot"],
 ];
 
@@ -21,8 +21,8 @@ const answers = [
     "Fine... how are you?",
     "Pretty well, how are you?",
     "Fantastic, how are you?",
-  ], //0
-  ["Hello!", "Hi!", "Hey!", "Hi there!", "Howdy"],
+  ], 
+  ["Hello!", "Hi!", "Hey!", "Hi there!", "How you doing ?"],
   [
     "Nothing much",
     "About to go to sleep",
@@ -67,9 +67,9 @@ function output(input) {
   if (compare(utterances, answers, text)) {
     product = compare(utterances, answers, text);
   }
-  // else if (TextSearch.match(SearchTerm)) {
-  //   navigate("/messagesection");
-  // }
+  else if (TextSearch.match(SearchTerm)) {
+    navigate("/messagesection");
+  }
   else {
     product = alternatives[Math.floor(Math.random() * alternatives.length)];
   }
@@ -99,25 +99,3 @@ function addChatEntry(input, product) {
   }, 2000);
 }
 
-//   return (
-//     <div>
-//       <div>
-//         {/* code for chatBot functionality  */}
-//         <div>
-//           <input
-//             id="input"
-//             type="text"
-//             placeholder="Write something..."
-//             autocomplete="off"
-//             autofocus="true"
-//           />
-//           <div id="messages"></div>
-//         </div>
-
-//         {/* code for chatbot UI  */}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ChatBot;
